@@ -1,9 +1,9 @@
 import React from "react";
 
-function Wired() {
+function Sports() {
   return (
     <div>
-      <h1>THIS PAGE SHOWS THE WIRED HEADPHONES AVAILABLE</h1>
+      <h1>THIS PAGE SHOWS SPORTS HEADPHONES AVAILABLE</h1>
       <h1>Some images will be shown</h1>
       <h1>discription of images will be shown</h1>
 
@@ -20,4 +20,4 @@ function Wired() {
   );
 }
 
-export default Wired;
+export default Sports;

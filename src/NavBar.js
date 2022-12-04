@@ -12,8 +12,13 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import BassBosted from "./components/BassBosted";
 import Contactus from "./components/Contactus";
+import SleekDesign from "./components/SleekDesign";
+import Sports from "./components/Sports";
 import Wired from "./components/Wired";
+import Wireless from "./components/Wireless";
+import Workout from "./components/Workout";
 function NavScrollExample() {
   return (
     <BrowserRouter>
@@ -38,20 +43,26 @@ function NavScrollExample() {
                   Home
                 </Nav.Link>
                 <NavDropdown title="Catogeries" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">sports</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">workout</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/Sports">
+                    sports
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/Workout">
+                    workout
+                  </NavDropdown.Item>
 
-                  <NavDropdown.Item href="#action5">
+                  <NavDropdown.Item as={Link} to="/BassBosted">
                     Bass Bosted
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action5">
+                  <NavDropdown.Item as={Link} to="/SleekDesign">
                     sleek design
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link as={Link} to="/Wired">
                   wired
                 </Nav.Link>
-                <Nav.Link href="#action2">wireless</Nav.Link>
+                <Nav.Link as={Link} to="/Wireless">
+                  wireless
+                </Nav.Link>
                 <Nav.Link as={Link} to="/Contactus">
                   Contact us
                 </Nav.Link>
@@ -71,7 +82,13 @@ function NavScrollExample() {
         </Navbar>
         <div>
           <Routes>
+            <Route path="/BassBosted" element={<BassBosted />} />
+            <Route path="/SleekDesign" element={<SleekDesign />} />
+            <Route path="/Sports" element={<Sports />} />
+            <Route path="/Workout" element={<Workout />} />
             <Route path="/Contactus" element={<Contactus />} />
+            <Route path="/Wired" element={<Wired />} />
+            <Route path="/Wireless" element={<Wireless />} />
           </Routes>
         </div>
       </div>
